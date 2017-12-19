@@ -21,6 +21,7 @@ Route::get('/authors/{id}', [
   'uses' => 'PageController@author',
   'as' => 'author'
 ]);
+
 Route::get('/posts/{id}', [
   'uses' => 'PostController@show',
   'as' => 'post'

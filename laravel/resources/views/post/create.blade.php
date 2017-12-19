@@ -4,7 +4,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <form action="create" method="post">
+        <form action="{{route('post.store')}}" method="post">
+          {{csrf_field()}}
           <div class="form-group">
               <label for="title">Title</label>
               <input type="text" name="title" id="title" class="form-control">
@@ -16,7 +17,6 @@
           <div class="form-group">
             <button type="submit" class="btn btn-primary">Create post</button>
           </div>
-          
           
         </form>
 

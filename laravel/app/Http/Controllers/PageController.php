@@ -3,14 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
+use App\User;
 
 class PageController extends Controller
 {
   public function index () {
-    return view('index');
+    $posts  = Post::orderBy('created_at', 'desc')->get();
+    return view('index', compact('posts'));
   }
 
   public function author ($id) {
-    return view('author');
+    $user = User::find($id);
+    return view('author')->with('user', $user);
   }
 }

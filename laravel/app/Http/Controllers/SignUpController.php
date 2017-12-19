@@ -25,7 +25,8 @@ class SignUpController extends Controller
       'email' => $email,
       'password' => $password
     ]);
-    return \Auth::login($user);
+    \Auth::login($user);
+    return redirect('/');
   }
 }
 

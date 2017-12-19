@@ -6,12 +6,8 @@
       <div class="col-md-8">
         <div class="card m-3">
           <div class="card-body">
-            <h2>first post by <a href="#">tanim</a> on <span class="text-muted">Dec 12, 2017</span></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt magni reprehenderit a quam veritatis vitae consectetur distinctio eaque aliquid quaerat provident quasi fuga, enim ex harum iusto dignissimos! Culpa, autem.</p>
-            <p>Incidunt magni reprehenderit a quam veritatis vitae consectetur distinctio eaque aliquid quaerat provident quasi fuga, enim ex harum iusto dignissimos! Culpa, autem.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt magni reprehenderit a quam veritatis vitae consectetur distinctio eaque aliquid quaerat provident quasi fuga, enim ex harum iusto dignissimos! Culpa, autem.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt magni reprehenderit a quam veritatis vitae consectetur distinctio eaque aliquid quaerat provident quasi fuga, enim ex harum iusto dignissimos! Culpa, autem.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt magni reprehenderit a quam veritatis vitae consectetur distinctio eaque aliquid quaerat provident quasi fuga, enim ex harum iusto dignissimos! Culpa, autem.</p>
+            <h2>{{$post->title}} by <a href="{{route('author', ['id' => $post->user->id])}}">{{$post->user->name}}</a> on <span class="text-muted">Dec 12, 2017</span></h2>
+            <p>{{$post->content}}</p>
           </div>
         </div>
       </div>
